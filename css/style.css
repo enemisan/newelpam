@@ -1,0 +1,306 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+}
+
+input {
+  cursor: pointer;
+  outline: none;
+}
+
+header {
+  display: none;
+  width: 100%;
+  background: linear-gradient(#00000080, #00000080), url("../img/bU6JyhSI6zo_Full.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+}
+
+nav {
+  width: 100%;
+  padding: 20px 40px;
+}
+nav .logo_ctn {
+  float: left;
+  width: auto;
+}
+nav .logo_ctn img {
+  width: 70px;
+}
+nav ul {
+  float: right;
+}
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin-left: 30px;
+  margin-top: 15px;
+}
+nav ul li a {
+  font-size: 20px;
+  color: white;
+  font-weight: 200;
+  text-decoration: none;
+  opacity: 0.6;
+}
+nav ul li a:hover {
+  opacity: 1;
+}
+
+.landPage_ctn {
+  clear: both;
+  height: 75vh;
+  display: grid;
+  grid-template-columns: repeat(1, 100%);
+  place-items: center;
+}
+.landPage_ctn div {
+  text-align: center;
+}
+.landPage_ctn div h1 {
+  font-size: 90px;
+  color: white;
+  margin-bottom: 20px;
+}
+.landPage_ctn div h1 span {
+  text-transform: uppercase;
+}
+.landPage_ctn div p {
+  font-size: 25px;
+  color: white;
+  opacity: 0.5;
+}
+.landPage_ctn div button {
+  --secs: .7s;
+  background: none;
+  border: none;
+  font-size: 20px;
+  padding: 15px 20px;
+  text-align: center;
+  color: white;
+  margin-top: 40px;
+  border: 2px solid white;
+  border-radius: 3px;
+  text-transform: uppercase;
+  transition: var(--secs) background, color ease;
+  -webkit-transition: var(--secs) background, color ease;
+  -o-transition: var(--secs) background, color ease;
+}
+.landPage_ctn div button:hover {
+  background: white;
+  color: #831470aa;
+  transition: var(--secs) all ease;
+  -webkit-transition: var(--secs) all ease;
+  -o-transition: var(--secs) all ease;
+}
+
+header svg {
+  margin-top: 15px;
+  position: absolute;
+  bottom: 0;
+}
+header center .arrow {
+  position: absolute;
+  bottom: 40px;
+  width: 60px;
+  opacity: 0.85;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 10px 15px 40px 0px #aaaaaa;
+  opacity: 0.8;
+}
+header center .arrow:hover {
+  opacity: 1;
+}
+
+.about_ctn {
+  padding: 50px 50px 25px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.about_ctn .about_text {
+  width: 50%;
+}
+.about_ctn .about_text .about {
+  position: relative;
+  color: #831470;
+  font-size: 17px;
+  text-decoration: none;
+}
+.about_ctn .about_text .about:hover {
+  color: black;
+}
+.about_ctn .about_text h2 {
+  font-size: 40px;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-top: 5px;
+  margin-bottom: 25px;
+}
+.about_ctn .about_text p {
+  line-height: 1.9;
+  font-size: 17px;
+  color: black;
+  opacity: 0.7;
+  margin-bottom: 20px;
+}
+.about_ctn .about_text .read_more {
+  position: relative;
+  color: black;
+  font-size: 17px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.about_ctn .about_text .read_more:hover:before {
+  width: 0;
+}
+.about_ctn .about_text .read_more:before {
+  position: absolute;
+  z-index: -1;
+  background: #ff9100;
+  opacity: 0.8;
+  content: "";
+  width: 100%;
+  -webkit-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+  left: 0;
+  bottom: 0;
+  top: 50%;
+}
+
+.services_ctn {
+  padding: 50px;
+}
+.services_ctn hr {
+  width: 100%;
+  background: #666666;
+}
+.services_ctn .services_text {
+  color: #831470;
+  font-size: 17px;
+  text-decoration: none;
+  text-align: right;
+  margin-top: 30px;
+}
+.services_ctn .services {
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  text-align: center;
+}
+.services_ctn .services div {
+  padding: 10px;
+}
+.services_ctn .services div img {
+  width: 70px;
+}
+.services_ctn .services div h1 {
+  font-size: 20px;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-top: 5px;
+  margin-bottom: 25px;
+}
+.services_ctn .services div p {
+  line-height: 1.9;
+  font-size: 17px;
+  color: black;
+  opacity: 0.7;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 1000px) {
+  .landPage_ctn div h1 {
+    font-size: 80px;
+  }
+
+  header center .arrow {
+    width: 45px;
+  }
+
+  .services_ctn .services {
+    grid-template-columns: repeat(2, 50%);
+  }
+}
+@media screen and (max-width: 900px) {
+  .landPage_ctn div h1 {
+    font-size: 70px;
+  }
+  .landPage_ctn div p {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 850px) {
+  nav ul {
+    display: none;
+  }
+
+  header center .arrow {
+    width: 40px;
+    bottom: 35px;
+  }
+}
+@media screen and (max-width: 750px) {
+  .about_ctn .about_text {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 650px) {
+  header {
+    background-attachment: scroll;
+    background-position: center;
+  }
+
+  .landPage_ctn div h1 {
+    font-size: 50px;
+  }
+  .landPage_ctn div p {
+    font-size: 17px;
+  }
+
+  header center .arrow {
+    width: 35px;
+    bottom: 17px;
+  }
+
+  .services_ctn .services {
+    grid-template-columns: repeat(1, 100%);
+  }
+}
+@media screen and (max-width: 450px) {
+  .landPage_ctn div h1 {
+    font-size: 35px;
+  }
+  .landPage_ctn div p {
+    font-size: 15px;
+  }
+  .landPage_ctn div button {
+    font-size: 15px;
+  }
+
+  header center .arrow {
+    width: 30px;
+    bottom: 10px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

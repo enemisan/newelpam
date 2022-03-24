@@ -1,0 +1,405 @@
+$gradientcolor-purple: #831470ad;
+$gradientcolor-black: #00000080;
+$purple: #831470;
+$orange: #ff9100;
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+}
+
+button {
+    cursor: pointer;
+    outline: none;
+}
+
+input {
+    cursor: pointer;
+    outline: none;
+}
+
+
+// Styling Starts Here
+// HEADER
+header {
+    display: none;
+    width: 100%;
+    background: linear-gradient($gradientcolor-black, $gradientcolor-black), url("../img/bU6JyhSI6zo_Full.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+nav {
+    width: 100%;
+    padding: 20px 40px;
+
+    .logo_ctn {
+        float: left;
+        width: auto;
+
+        img {
+            width: 70px;
+        }
+    }
+
+    ul {
+        float: right;
+
+        li {
+            display: inline-block;
+            list-style: none;
+            margin-left: 30px;
+            margin-top: 15px;
+
+            a {
+                font-size: 20px;
+                color: white;
+                font-weight: 200;
+                text-decoration: none;
+                opacity: .6;
+            }
+
+            a:hover {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.landPage_ctn {
+    clear: both;
+    height: 75vh;
+    display: grid;
+    grid-template-columns: repeat(1, 100%);
+    place-items: center;
+
+    div {
+        text-align: center;
+
+        h1 {
+            font-size: 90px;
+            color: white;
+            margin-bottom: 20px;
+
+            span {
+                // border-bottom: 10px unset $purple;
+                text-transform: uppercase;
+            }
+        }
+
+        p {
+            font-size: 25px;
+            color: white;
+            opacity: .5;
+        }
+
+        button {
+            --secs: .7s;
+            background: none;
+            border: none;
+            font-size: 20px;
+            padding: 15px 20px;
+            text-align: center;
+            color: white;
+            margin-top: 40px;
+            border: 2px solid white;
+            border-radius: 3px;
+            text-transform: uppercase;
+            transition: var(--secs) background, color ease;
+            -webkit-transition: var(--secs) background, color ease;
+            -o-transition: var(--secs) background, color ease;
+        }
+
+        button:hover {
+            background: white;
+            color: $purple+aa;
+            transition: var(--secs) all ease;
+            -webkit-transition: var(--secs) all ease;
+            -o-transition: var(--secs) all ease;
+        }
+    }
+}
+
+header {
+    svg {
+        margin-top: 15px;
+        position: absolute;
+        bottom: 0;
+    }
+
+    center {
+        .arrow {
+            position: absolute;
+            bottom: 40px;
+            width: 60px;
+            opacity: .85;
+            cursor: pointer;
+            border: none;
+            border-radius: 50%;
+            box-shadow: 10px 15px 40px 0px #aaaaaa;
+            opacity: .8;
+        }
+
+        .arrow:hover {
+            opacity: 1;
+        }
+    }
+}
+
+
+// ABOUT
+.about_ctn {
+    padding: 50px 50px 25px;
+    display: flex;
+    flex-wrap: wrap;
+
+    .about_text {
+        width: 50%;
+
+        .about {
+            position: relative;
+            color: $purple;
+            font-size: 17px;
+            text-decoration: none;
+        }
+
+        .about:hover {
+            color: black;
+        }
+
+
+
+        h2 {
+            font-size: 40px;
+            font-weight: 300;
+            text-transform: uppercase;
+            margin-top: 5px;
+            margin-bottom: 25px;
+        }
+
+        p {
+            line-height: 1.9;
+            font-size: 17px;
+            color: black;
+            opacity: .7;
+            margin-bottom: 20px;
+        }
+
+        .read_more {
+            position: relative;
+            color: black;
+            font-size: 17px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .read_more:hover:before {
+            width: 0;
+        }
+
+        .read_more:before {
+            position: absolute;
+            z-index: -1;
+            background: $orange;
+            opacity: .8;
+            content: "";
+            width: 100%;
+            -webkit-transition: .3s all ease;
+            -o-transition: .3s all ease;
+            transition: .3s all ease;
+            left: 0;
+            bottom: 0;
+            top: 50%;
+        }
+    }
+}
+
+.services_ctn {
+    padding: 50px;
+
+    hr {
+        width: 100%;
+        background: #666666;
+    }
+
+    .services_text {
+        // position: relative;
+        color: $purple;
+        font-size: 17px;
+        text-decoration: none;
+        text-align: right;
+        margin-top: 30px;
+    }
+
+    .services {
+        display: grid;
+        grid-template-columns: repeat(4, 25%);
+        text-align: center;
+
+        div {
+            padding: 10px;
+
+            img {
+                width: 70px;
+            }
+
+            h1 {
+                font-size: 20px;
+                font-weight: 300;
+                text-transform: uppercase;
+                margin-top: 5px;
+                margin-bottom: 25px;
+            }
+
+            p {
+                line-height: 1.9;
+                font-size: 17px;
+                color: black;
+                opacity: .7;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+
+
+
+
+// MEDIA QUERIES
+@media screen and (max-width: 1000px) {
+    .landPage_ctn {
+        div {
+            h1 {
+                font-size: 80px;
+            }
+        }
+    }
+
+    header {
+        center {
+            .arrow {
+                width: 45px;
+            }
+        }
+    }
+
+    .services_ctn {
+        .services {
+            grid-template-columns: repeat(2, 50%);
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .landPage_ctn {
+        div {
+            h1 {
+                font-size: 70px;
+            }
+
+            p {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 850px) {
+    nav {
+        ul {
+            display: none;
+        }
+    }
+
+    header {
+        center {
+            .arrow {
+                width: 40px;
+                bottom: 35px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .about_ctn {
+        .about_text {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 650px) {
+    header {
+        background-attachment: scroll;
+        background-position: center;
+    }
+
+    .landPage_ctn {
+        div {
+            h1 {
+                font-size: 50px;
+            }
+
+            p {
+                font-size: 17px;
+            }
+        }
+    }
+
+    header {
+        center {
+            .arrow {
+                width: 35px;
+                bottom: 17px;
+            }
+        }
+    }
+
+    .services_ctn {
+        .services {
+            grid-template-columns: repeat(1, 100%);
+        }
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .landPage_ctn {
+        div {
+            h1 {
+                font-size: 35px;
+            }
+
+            p {
+                font-size: 15px;
+            }
+
+            button {
+                font-size: 15px;
+            }
+        }
+    }
+
+    header {
+        center {
+            .arrow {
+                width: 30px;
+                bottom: 10px;
+            }
+        }
+    }
+}
